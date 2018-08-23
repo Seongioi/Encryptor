@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EnigmaIn">
+
+    <EditText
+        android:id="@+id/message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:gravity="top|start"
+        android:hint="@string/Message"
+        android:inputType="textMultiLine"
+        android:lines="8"
+        android:maxLines="10"
+        android:minLines="6"
+        android:padding="5dp"
+        android:scrollbars="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/rotorPrompt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:paddingEnd="0dp"
+        android:paddingStart="8dp"
+        android:text="@string/Rotor1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/message" />
+
+    <Spinner
+        android:id="@+id/spinnerRotor1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:entries="@array/rotorNames"
+        android:prompt="@string/Rotor1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rotorPrompt1" />
+
+    <TextView
+        android:id="@+id/rotorPrompt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:paddingEnd="0dp"
+        android:paddingStart="8dp"
+        android:text="@string/Rotor2"
+        app:layout_constraintStart_toStartOf="@+id/spinnerRotor2"
+        app:layout_constraintTop_toBottomOf="@+id/message" />
+
+    <Spinner
+        android:id="@+id/spinnerRotor2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:entries="@array/rotorNames"
+        android:prompt="@string/Rotor1"
+        app:layout_constraintEnd_toStartOf="@+id/spinnerRotor3"
+        app:layout_constraintStart_toEndOf="@+id/spinnerRotor1"
+        app:layout_constraintTop_toBottomOf="@+id/rotorPrompt2" />
+
+    <TextView
+        android:id="@+id/rotorPrompt3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:paddingEnd="0dp"
+        android:paddingStart="8dp"
+        android:text="@string/Rotor3"
+        app:layout_constraintStart_toStartOf="@+id/spinnerRotor3"
+        app:layout_constraintTop_toBottomOf="@+id/message" />
+
+    <Spinner
+        android:id="@+id/spinnerRotor3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:entries="@array/rotorNames"
+        android:prompt="@string/Rotor1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rotorPrompt3" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="8dp"
+        android:paddingEnd="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/Reflector"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerRotor3" />
+
+    <Spinner
+        android:id="@+id/spinnerReflector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:entries="@array/reflectorNames"
+        android:prompt="@string/Rotor1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/RotorPositions"
+        app:layout_constraintStart_toEndOf="@+id/spinnerReflector"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerRotor3" />
+
+    <EditText
+        android:id="@+id/startingLocLeft"
+        android:layout_width="45dp"
+        android:layout_height="39dp"
+        android:ems="10"
+        android:hint="@string/Left"
+        android:inputType="number"
+        android:maxLength="2"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <EditText
+        android:id="@+id/startingLocMiddle"
+        android:layout_width="45dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="8dp"
+        android:ems="10"
+        android:hint="@string/Middle"
+        android:inputType="number"
+        android:maxLength="2"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/startingLocLeft"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <EditText
+        android:id="@+id/startingLocRight"
+        android:layout_width="45dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="8dp"
+        android:ems="10"
+        android:hint="@string/Right"
+        android:inputType="number"
+        android:maxLength="2"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/startingLocMiddle"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/plugBoard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:paddingEnd="0dp"
+        android:paddingStart="8dp"
+        android:text="@string/Plugboard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerReflector" />
+
+    <EditText
+        android:id="@+id/plugBoardInput"
+        android:layout_width="match_parent"
+        android:layout_height="39dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="0dp"
+        android:ems="10"
+        android:hint="@string/PlugBoardHint"
+        android:inputType="text|textNoSuggestions"
+        android:maxLength="26"
+        android:textSize="12sp"
+        android:windowSoftInputMode="adjustPan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/plugBoard" />
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:clickable="true"
+        android:fitsSystemWindows="true"
+        android:focusable="true"
+        android:onClick="cipherB"
+        android:src="@drawable/round_done_white_18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/plugBoardInput"
+        app:layout_constraintVertical_bias="0.926" />
+
+    <Switch
+        android:id="@+id/cypherOption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/plugBoardInput"
+        android:checked="true"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/Decrypt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/plugBoardInput" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/Encrypt"
+        app:layout_constraintStart_toEndOf="@+id/cypherOption"
+        app:layout_constraintTop_toBottomOf="@+id/plugBoardInput" />
+
+</android.support.constraint.ConstraintLayout>

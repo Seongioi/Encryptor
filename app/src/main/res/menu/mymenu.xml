@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/enigma"
+        android:title="@string/enigma"/>
+    <item
+        android:id="@+id/onetimepad"
+        android:title="@string/oneTimePad" />
+    <item
+        android:id="@+id/rot13"
+        android:title="@string/rot13" />
+</menu>

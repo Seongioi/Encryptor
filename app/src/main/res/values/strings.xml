@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Encryptor</string>
+    <string name="enigma">Enigma</string>
+    <string name="oneTimePad">One Time Pad</string>
+    <string name="rot13">Rot 13</string>
+
+    <string name="Rotor1">Rotor 1:</string>
+    <string name="Rotor2">Rotor 2:</string>
+    <string name="Rotor3">Rotor 3:</string>
+    <string name="Message">Message</string>
+    <string name="Reflector">Reflector</string>
+    <string name="RotorPositions">Rotor Positions</string>
+    <string name="Left">Left</string>
+    <string name="Middle">Middle</string>
+    <string name="Right">Right</string>
+    <string name="Plugboard">Plug board</string>
+    <string name="PlugBoardHint">Ex. abcdefghijklmnopqrstuvwxyz (optional)</string>
+    <string name="Encrypt">Encrypt</string>
+    <string name="Decrypt">Decrypt</string>
+
+    <string-array name="rotorNames">
+        <item>I</item>
+        <item>II</item>
+        <item>III</item>
+        <item>IV</item>
+        <item>V</item>
+    </string-array>
+
+    <string-array name="reflectorNames">
+        <item>Beta</item>
+        <item>Gamma</item>
+    </string-array>
+    <string name="title_activity_display_enigma_ciphered_message">DisplayEnigmaCipheredMessage
+    </string>
+
+    <string name="Key">Key (optional)</string>
+    <string name="KeyOutput">Key:</string>
+</resources>
